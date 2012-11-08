@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Profile</title>
+		<script type="text/javascript">
+		
+			
+		function valid(form){
+			var emailVal = document.getElementById('email').value;
+			var usernameVal = document.getElementById('username').value;
+			var passwordVal = document.getElementById('password').value;
+			var c_passwordVal = document.getElementById('c_password').value;
+			
+		if(emailVal === ''||usernameVal === '' ||passwordVal === '' ||c_passwordVal === ''){
+			alert('Empty Field cannot be submitted');
+			return false;		
+		}
+		alert('pass';)
+		return true;
+</script>		
+		
+		
+			</head>
+
+
+	<body>
+	<div id="page">
+   <div id="header"><h1><font color="#BC1B13">Leapfrog Technology</font></h1></div>
+   <div class="container">
+	
+	<div class = "topmenu">
+			
+				
+				<a href="home.htm">Home</a>
+				<a href="login.htm">Login</a>
+				<a href="signup.htm">Signup</a>
+				
+	</div>
+	
+	<div class = "leftmenu"></div>
+	<div class= "rightmenu"></div>	
+
+<form method="post" action="#" onSubmit = "return valid(this)" name="form">
+     
+     <br><br><label><h4>SignUp Form</h4></label>
+		
+	   	<label>First Name: </label><input type="text" id="firstname" /><br>
+	   	<label>Last Name: </label><input type="text" id="lastname" /><br><br>
+	   	<label>Gender:</label><input type="radio" name="Gender" value="male">Male<input type="radio" name="Gender" value="female">Female<br>     
+	   	<label>Marital Status:</label><input type="radio" name="Status" value="Single">Single<input type="radio" name="Status" value="Married">Married<br>  <br> 			
+			<label>Date of Birth: </label> 
+			<label><font>MM</font>
+			<select>
+			  	<option>January</option>
+  			  	<option>February</option>
+  				<option>March</option>
+			</select>   </label>	   
+			<label><font>DD</font>
+			<select>
+			  	<option>01</option>
+  			  	<option>02</option>
+  				<option>03</option>
+			</select>   </label>	   
+			<label><font>YY</font>
+			<select>
+			  	<option>1987</option>
+  			  	<option>1988</option>
+  				<option>1989</option>
+		      <option>1990</option>
+		      <option>1991</option>
+		      <option>1992</option>
+			</select>   </label><br><br>	   
+
+   	 	<label>Email: </label><input type="text" id="email" /><br><br>
+			<label>Username: </label><input type="text" id="username"  /><br><br>
+			<label>Password: </label><input type="password" id="password"/><br><br>
+			<label>Confirm Password: </label><input type="password" id="c_password"/><br><br>
+			<label>Country: 
+			<select>
+			  	<option>America</option>
+  			  	<option>Bhutan</option>
+  				<option>Canada</option>
+		      <option>Nepal</option>
+		      <option>UK</option>
+		      <option>Japan</option>
+			</select>   </label><br><br>
+			
+			<FONT SIZE="4">Which Languages do you know?<BR></br>
+ <INPUT TYPE="CHECKBOX" NAME="Language" VALUE="C">C<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="PHP">PHP<br>
+<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="C++">C++<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="HTML">HTML<BR>
+<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="Java">Java<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="Ruby">Ruby<BR>
+<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="C#">C#<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="Python">Python<BR>
+
+		<input type="submit" value="Signup Now" />
+		</form>
+		</div>
+		</div>
+		<div id="footer">Copyright &copy; 2012 by Kunwar</div>
+
+
+</body>	
+	
+	</html>

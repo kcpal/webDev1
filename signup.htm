@@ -6,7 +6,7 @@
 		<title>Signup</title>
 		<script type="text/javascript">
 		   var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i 
-			var ck_username = /^[A-Za-z0-9_]{6,20}$/;
+			var ck_username = /^([A-Za-z](?:\.[A-Za-z]{1})?[A-Za-z0-9]{6,20})$/i
 			var ck_password = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
 			var ck_c_password= /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
 		
@@ -17,6 +17,11 @@
 			var passwordVal = document.getElementById('password').value;
 			var c_passwordVal = document.getElementById('c_password').value;
 			
+		if(emailVal === ''||usernameVal === '' ||passwordVal === '' ||c_passwordVal === ''){
+			alert('Empty Field cannot be submitted');
+			return false;		
+		}
+					
 			
 			if(!ck_email.test(emailVal)){
 			alert('enter valid email');	
@@ -53,7 +58,7 @@
 		<a href="login.htm">Login</a>
 		<a href="signup.htm">Signup</a>
 	</div>
-	<div class = "leftmenu">Friends<li>Kunwar</li> <li>Tek</li> <li>Anil</li> <li>Nikita.</li></div>
+	<div class = "leftmenu"></div>
 	<div class= "rightmenu"></div>	<br></br><br></br>
 	<form method="post" action="#" onSubmit = "return valid(this)" name="form">
 	     <label><h4>SignUp Form</h4></label>
