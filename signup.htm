@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+		<title>Signup</title>
 		<script type="text/javascript">
-		function valid(){
+		var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i 
+			var ck_username = /^[A-Za-z0-9_]{6,20}$/;
+			var ck_password = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+			var ck_c_password= /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+		
+			
+		function valid(form){
 			var emailVal = document.getElementById('email').value;
 			var usernameVal = document.getElementById('username').value;
 			var passwordVal = document.getElementById('password').value;
 			var c_passwordVal = document.getElementById('c_password').value;
-			if(emailVal === '' || usernameVal === '' || passwordVal === '' || c_passwordVal === ''){
-				alert('empty fields can not be submitted');
+			
+			
+			if(!ck_email.test(emailVal)){
+			alert('enter valid email');	
+			return false;
+			}
+			if(!ck_username.test(usernameVal)){
+			alert('Please enter the valid username');
 				return false;
 			}
+			 if(!ck_password.test(passwordVal)){
+			alert('Please enter the valid password');
+			return false;		
+		  }
+		 
+		 if(passwordVal != c_passwordVal){
+		   alert('Password donot match');
+			return false;	
+		  }
+	  
+			alert('Pass');
+			return true;	  
+	 
 		}
 		</script>
+	
 	</head>
 	<body>
-		<a href="home.htm">Home</a><br/><a href="login.htm">Login</a><br/><a href="signup.htm">Signup</a>
-		<form method="post" action="" onSubmit = "return valid()">
-			<label>Email</label><input type="text" id="email" /><br/>
-			<label>Username</label><input type="text" id="username" /><br/>
-			<label>Password</label><input type="password" id="password" /><br/>
-			<label>Confirm Password</label><input type="password" id="c_password" /><br/>
+	<div id="page">
+   <div id="header"><h1><font color="#BC1B13">Leapfrog Technology</font></h1></div>
+   <div class="container">
+	
+	<div class = "topmenu">
+		<a href="home.htm">Home</a>
+		<a href="login.htm">Login</a>
+		<a href="signup.htm">Signup</a>
+	</div>
+	<div class = "leftmenu">Friends<li>Kunwar</li> <li>Tek</li> <li>Anil</li> <li>Nikita.</li></div>
+	<div class= "rightmenu"></div>	<br></br><br></br>
+	<form method="post" action="#" onSubmit = "return valid(this)" name="form">
+	     <label><h4>SignUp Form</h4></label>
+		   <label>Email: </label><input type="text" id="email" /><br/>
+			<label>Username: </label><input type="text" id="username" /><br/>
+			<label>Password: </label><input type="password" id="password" /><br/>
+			<label>Confirm Password: </label><input type="password" id="c_password" /><br/>
 			<input type="submit" value="Signup Now" />
 		</form>
+		</div>
+		<div id="footer">Copyright &copy; 2012 by Kunwar</div>
+</div>
 	</body>
 </html>
