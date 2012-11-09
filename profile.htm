@@ -6,18 +6,20 @@
 		<script type="text/javascript">
 		
 			
-		function valid(form){
+		function valid(){
+		alert(entered);
 			var emailVal = document.getElementById('email').value;
 			var usernameVal = document.getElementById('username').value;
 			var passwordVal = document.getElementById('password').value;
 			var c_passwordVal = document.getElementById('c_password').value;
 			
-		if(emailVal === ''||usernameVal === '' ||passwordVal === '' ||c_passwordVal === ''){
+		if(emailVal === '' || usernameVal === '' || passwordVal === '' || c_passwordVal === ''){
 			alert('Empty Field cannot be submitted');
 			return false;		
 		}
 		alert('pass';)
 		return true;
+		}
 </script>		
 		
 		
@@ -41,7 +43,7 @@
 	<div class = "leftmenu"></div>
 	<div class= "rightmenu"></div>	
 
-<form method="post" action="#" onSubmit = "return valid(this)" name="form">
+<form method="post" action="" onSubmit = "return valid()">
      
      <br><br><label><h4>SignUp Form</h4></label>
 		
@@ -86,11 +88,11 @@
 		      <option>Japan</option>
 			</select>   </label><br><br>
 			
-			<FONT SIZE="4">Which Languages do you know?<BR></br>
- <INPUT TYPE="CHECKBOX" NAME="Language" VALUE="C">C<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="PHP">PHP<br>
-<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="C++">C++<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="HTML">HTML<BR>
-<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="Java">Java<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="Ruby">Ruby<BR>
-<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="C#">C#<INPUT TYPE="CHECKBOX" NAME="Language" VALUE="Python">Python<BR>
+			<label >Which Languages do you know?</label>><BR></br>
+ 		<input type="CHECKBOX" NAME="Language" VALUE="C"/>C<input type="CHECKBOX" NAME="Language" VALUE="PHP"/>PHP<br>
+		<input type="CHECKBOX" NAME="Language" VALUE="C++"/>C++<input type="CHECKBOX" NAME="Language" VALUE="HTML"/>HTML<BR>
+		<input type="CHECKBOX" NAME="Language" VALUE="Java"/>Java<input type="CHECKBOX" NAME="Language" VALUE="Ruby"/>Ruby<BR>
+		<input type="CHECKBOX" NAME="Language" VALUE="C#"/>C#<input type="CHECKBOX" NAME="Language" VALUE="Python"/>Python<BR>
 
 		<input type="submit" value="Signup Now" />
 		</form>
